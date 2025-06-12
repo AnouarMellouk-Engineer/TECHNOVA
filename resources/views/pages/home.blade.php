@@ -16,17 +16,42 @@
             </div>
         </div>
     </div>
-    <div class=" px-10 pb-56 pt-5">
-        <div  class=" flex justify-between ">
+    <div class=" px-10   pt-5 "> <!--pb-56-->
+        <div  class=" flex justify-between mb-16">
             @foreach($featurs as $featur)
             <x-card-info :featur='$featur'/>
             @endforeach
         </div>
-        {{-- <div class=" flex gap-7 ">
-            <x-landing-card/>
-            <x-landing-card/>
-            <x-landing-card/>
-        </div> --}}
-    </div>
-
+        <h2 class="  relative  text-center font-bold text-3xl my-12  after:absolute after:w-[40%] after:h-[1px] after:bg-gray-500 after:right-0 after:top-[50%] before:absolute before:w-[40%] before:h-[1px] before:bg-gray-500 before:left-0 before:top-[50%] ">Laptops Section</h2>
+        <div class="flex justify-between items-center">
+              <x-product-card/>
+            <x-product-card/>
+              <x-product-card/>
+                <x-product-card/>
+        </div>
+        <h2 class="  relative  text-center font-bold text-3xl my-12 mt-16  after:absolute after:w-[37%] after:h-[1px] after:bg-gray-500 after:right-0 after:top-[50%] before:absolute before:w-[37%] before:h-[1px] before:bg-gray-500 before:left-0 before:top-[50%] ">Laptops On Discount</h2>
+        <div class="flex justify-between items-center">
+              <x-product-card/>
+            <x-product-card/>
+              <x-product-card/>
+                <x-product-card/>
+        </div>
+         </div>
+        <div class=" my-11 bg-purple-700  py-12">
+            <h2 class="text-center font-bold text-3xl text-white mb-5"> All categories</h2>
+            <div class="px-10 flex justify-center items-start gap-3.5 flex-wrap">
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                 <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+                <x-categorie-icon/>
+            </div>
+        </div>
 </x-base>
