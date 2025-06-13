@@ -19,14 +19,14 @@ class Product extends Model
 
     public function categorie()
     {
-        return $this->belongsTo(Categorie::class);
+        return $this->belongsTo(Categorie::class, 'category_id');
     }
 
 
 
     public function codes()
     {
-        return $this->belongsToMany(Code::class, 'discounts');
+        return $this->belongsToMany(Code::class, 'discounts')->withPivot('discount_value');
     }
 
     public function users()
@@ -41,6 +41,6 @@ class Product extends Model
 
     public function users3()
     {
-        return $this->belongsToMany(User::class, 'reviews');
+        return $this->belongsToMany(User::class, 'reviews')->withPivot('comment', 'rating', 'review_date');
     }
 }

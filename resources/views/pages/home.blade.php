@@ -40,18 +40,10 @@
         <div class=" my-11 bg-purple-700  py-12">
             <h2 class="text-center font-bold text-3xl text-white mb-5"> All categories</h2>
             <div class="px-10 flex justify-center items-start gap-3.5 flex-wrap">
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                 <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
-                <x-categorie-icon/>
+                @foreach($icons as $icon)
+                <x-categorie-icon :icon='$icon'/>
+                @endforeach
+
             </div>
         </div>
 </x-base>

@@ -10,6 +10,6 @@ class Code extends Model
 
     public function products()
     {
-        return $this->belongsToMany(Product::class, 'discounts');
+        return $this->belongsToMany(Product::class, 'discounts')->withPivot('discount_value');
     }
 }
